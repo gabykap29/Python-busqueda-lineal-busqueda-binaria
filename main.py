@@ -22,7 +22,7 @@ final_busqueda_lineal = time.time()
 #resto los tiempo para obtener el tiempo que tomo de ejecución 
 tiempo_busqueda_lineal =  final_busqueda_lineal - inicio_busqueda_lineal
 #rcalculo la memoria utilizada
-memoria_busqueda_lineal = sys.getsizeof(lista) + sys.getsizeof(objetivo)
+memoria_busqueda_lineal = sys.getsizeof(busqueda_lineal(lista, objetivo))
 
 inicio_busqueda_binaria = time.time()
 
@@ -32,7 +32,7 @@ final_busqueda_binaria = time.time()
 #resto los tiempo para obtener el tiempo que tomo de ejecución 
 tiempo_busqueda_binaria =  final_busqueda_binaria - inicio_busqueda_binaria
 
-memoria_busqueda_binaria = sys.getsizeof(lista) + sys.getsizeof(objetivo)
+memoria_busqueda_binaria = sys.getsizeof(busqueda_binaria(lista, objetivo)) 
 
 #imprimo los resultados.
 print(f"Busqueda lineal: {tiempo_busqueda_lineal} y recursos utilizados {memoria_busqueda_lineal}" )
